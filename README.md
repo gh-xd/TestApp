@@ -1,3 +1,6 @@
+The TestApp can be accessed via [https://gh-xd.github.io/TestApp/](https://gh-xd.github.io/TestApp/) already.
+
+---
 # eframe template
 
 [![dependency status](https://deps.rs/repo/github/emilk/eframe_template/status.svg)](https://deps.rs/repo/github/emilk/eframe_template)
