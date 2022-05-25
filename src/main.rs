@@ -11,6 +11,10 @@ fn main() {
     eframe::run_native(
         "eframe template",
         native_options,
-        Box::new(|cc| Box::new(test_app::TemplateApp::new(cc))),
+        // Box::new(|cc| Box::new(test_app::TemplateApp::new(cc))),
+        // Box::new(|_| Box::new(test_app::LineDemo::default())),
+        Box::new(|_| Box::new(test_app::FractalClock::default())),
+
+
     );
 }

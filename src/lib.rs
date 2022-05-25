@@ -1,7 +1,11 @@
 #![warn(clippy::all, rust_2018_idioms)]
 
 mod app;
+mod chart;
+mod frac;
 pub use app::TemplateApp;
+pub use chart::LineDemo;
+pub use frac::FractalClock;
 
 // ----------------------------------------------------------------------------
 // When compiling for web:
@@ -22,5 +26,9 @@ pub fn start(canvas_id: &str) -> Result<(), eframe::wasm_bindgen::JsValue> {
     // Redirect tracing to console.log and friends:
     tracing_wasm::set_as_global_default();
 
-    eframe::start_web(canvas_id, Box::new(|cc| Box::new(TemplateApp::new(cc))))
+    // eframe::start_web(canvas_id, Box::new(|cc| Box::new(TemplateApp::new(cc))))
+    // eframe::start_web(canvas_id, Box::new(|cc| Box::new(LineDemo::default())))
+    eframe::start_web(canvas_id, Box::new(|cc| Box::new(FractalClock::default())))
+
+
 }
